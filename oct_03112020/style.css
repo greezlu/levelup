@@ -1,0 +1,320 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: Verdana, "Times New Roman", sans-serif;
+  color: white;
+}
+
+body {
+  background-color: #070e14;
+}
+
+/* ----------------------------------- */
+
+.mainContainer {
+  width: 1380px;
+  height: 815px;
+  margin: 90px 0 90px -690px;
+  position: relative;
+  left: 50%;
+}
+
+/* ----------------------------------- */
+
+.leftContainer {
+  width: 690px;
+  height: 815px;
+  float:  left;
+}
+
+.rightContainer {
+  width: 690px;
+  height: 815px;
+  float:  left;
+}
+
+/* ----------------------------------- */
+
+.line {
+  background-color: #003333;
+  width: 1px;
+  height: 790px;
+}
+
+.leftContainer .line {
+  float: left;
+}
+
+.rightContainer .line {
+  float: right;
+}
+
+/* ----------------------------------- */
+
+.sideBar {
+  width: 50px;
+  height: 790px;
+}
+
+.rotate {
+  transform: rotate(-90deg);
+  transform-origin: left top 0;
+  font-family: "Times New Roman";
+  font-size: 16px;
+  color: #cccccc;
+}
+
+.leftContainer .sideBar .rotate {
+  float: left;
+  margin: -345px 0 0 0;
+  padding: 19px 0 0 0;
+  height: 30px;
+}
+
+.rightContainer .sideBar .life {
+  float: right;
+  margin: -335px -70px 0 0;
+  padding: 16px 0 0 0;
+  height: 34px;
+}
+
+.rightContainer .sideBar .bio {
+  float: right;
+  margin: -350px -44px 0 0;
+  padding: 16px 0 0 0;
+  height: 34px;
+}
+
+.rightContainer .sideBar .film {
+  float: right;
+  margin: -339px -66px 0 0;
+  padding: 16px 0 0 0;
+  height: 34px;
+}
+
+.leftContainer .sideBar {
+  float: left;
+}
+
+.rightContainer .sideBar {
+  float: right;
+}
+
+/* ----------------------------------- */
+
+.name h2 {
+  font-family: "Times New Roman";
+  font-size: 80px;
+}
+
+.name {
+  position: relative;
+  bottom: 0;
+}
+
+.leftContainer .spacer {
+  width: 640px;
+  height: 400px;
+}
+
+/* ----------------------------------- */
+
+.content {
+  width: 640px;
+  height: 790px;
+}
+
+.leftContainer .content {
+  float: left;
+}
+
+.rightContainer .content {
+  float: right;
+}
+
+/* ----------------------------------- */
+
+.menu {
+  margin: 40px 0 0 0;
+  list-style-type: none;
+}
+
+.menu li {
+  font-size: 26px;
+  color: #cccccc;
+  margin: 0 0 30px 0;
+}
+
+.menu .active {
+  color: white;
+  font-weight: bold;
+}
+
+.menu li a {
+  text-decoration: none;
+}
+
+/* ----------------------------------- */
+
+.topPanel {
+  width: 690px;
+  height: 20px;
+  padding: 0 0 5px 0;
+}
+
+.leftContainer .topPanel  {
+  float: left;
+}
+
+.rightContainer .topPanel  {
+  float: right;
+}
+
+.topPanel span {
+  color: #cccccc;
+  font-family: "Verdana";
+  font-size: 12px;
+}
+
+.topPanel .info {
+  float: left;
+}
+
+.topPanel .year {
+  float: right;
+  margin: 0 10px 0 0;
+}
+
+.topPanel .year {
+  float: right;
+  margin: 0 10px 0 0;
+}
+
+.leftContainer .topPanel .info {
+  margin: 0 0 0 50px;
+}
+
+/* ----------------------------------- */
+
+.infoContainer .line {
+  float: left;
+  width: 1px;
+  height: 430px;
+  background-color: #003333;
+}
+
+.infoContainer .spacer{
+  width: 1380px;
+  height: 90px;
+  float: left;
+}
+
+/* ----------------------------------- */
+
+.infoContainer {
+  width: 1380px;
+  position: relative;
+  left: 50%;
+  margin: 0 0 0 -690px;
+}
+
+.infoContainer ul {
+  list-style-type: none;
+  float: left;
+}
+
+.infoContainer .ulMainList,
+.infoContainer .ulFilmsList {
+  padding: 0 0 0 50px;
+  width: 398px;
+  float: left;
+  margin: 0 50px 0 0;
+  border-left: 1px solid #003333;
+}
+
+.infoContainer .ulSecondList {
+  padding: 0 0 0 20px;
+  width: 380px;
+  float: left;
+}
+
+.infoContainer li {
+  font-family: "Times New Roman";
+  font-size: 26px;
+  margin: 0 0 20px 0;
+}
+
+.infoContainer .ulMainList li,
+.infoContainer .ulFilmsList li {
+  padding: 20px 0 20px 0;
+}
+
+.infoContainer .ulMainList li:last-child {
+  padding: 0;
+  margin: 0;
+}
+
+.infoContainer .ulSecondList li {
+  padding: 10px 0 10px 0;
+  font-family: "Verdana";
+}
+
+.infoContainer .ulSecondList li:last-child,
+.infoContainer .ulFilmsList li:last-child {
+  margin: 0;
+}
+
+.infoContainer a {
+  font-family: "Times New Roman";
+  font-size: 26px;
+  text-decoration: none;
+}
+
+.infoContainer .ulMainList a,
+.infoContainer .ulFilmsList a {
+  color: #cccccc;
+}
+
+.infoContainer .ulSecondList a {
+  color: #999999;
+}
+
+.infoContainer a:hover {
+  font-weight: bold;
+}
+
+/* ----------------------------------- */
+
+.bioText, .mainText {
+  float: left;
+  padding: 0 50px 0 50px;
+}
+
+.bioText {
+  width: 880px;
+  padding: 0 0 90px 0;
+}
+
+.mainText {
+  width: 1280px;
+  margin: 0 0 90px 0;
+}
+
+/* ----------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
