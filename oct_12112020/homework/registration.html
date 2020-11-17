@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration</title>
+</head>
+<body>
+
+  <form method="post" enctype="multipart/form-data">
+
+    <label>Login
+      <input type="text" list="logins" name="login" placeholder="enter login" minlength="3" maxlength="30" required>
+    </label><br>
+
+    <datalist id="logins">
+      <option>vasya</option>
+      <option>petya</option>
+      <option>kolya</option>
+    </datalist>
+
+    <label>Password
+      <input type="password" name="pass" minlength="6" maxlength="40" required>
+    </label><br>
+
+    <label>Confirm password
+      <input type="password" name="pass2" minlength="6" maxlength="40" required>
+    </label><br>
+
+    <label>Name
+      <input type="text" name="username">
+    </label><br>
+
+    <label>Email
+      <input type="text" name="email">
+    </label><br>
+
+    <label>Avatar
+      <input type="file" name="avatar" accept="image/*">
+    </label><br>
+
+    <input type="submit" name="submit" value="Register">
+
+  </form>
+
+</body>
+</html>
