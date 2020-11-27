@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>About</title>
+</head>
+<body>
+
+  <a href="about.html"><h1>Tesla</h1></a>
+  <a href="about.html"><img src="images/logo.png" alt="Tesla Logo" width="100px"></a>
+
+  <ul>
+    <li><a href="about.html">About</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><b>Feedback</b></li>
+  </ul>
+
+  <hr>
+
+  <form action="feedback.html" name="feedback" enctype="application/x-www-form-urlencoded">
+
+  <table id="feedbackTable">
+
+    <caption>Feedback form</caption>
+
+    <tr>
+      <td>Name:</td>
+      <td><input type="text" name="user-name" placeholder="Enter your name" required></td>
+    </tr>
+
+    <tr>
+      <td>Last name:</td>
+      <td><input type="text" name="last-name" placeholder="Enter your last name" required></td>
+    </tr>
+
+    <tr>
+      <td>Email:</td>
+      <td><input type="email" name="email" placeholder="Enter your email" required></td>
+    </tr>
+
+    <tr>
+      <td>Gender:</td>
+      <td>
+
+        <label for="user-gender-1">Male
+          <input id="user-gender-1" type="radio" name="gender" value="male" checked>
+        </label>
+
+        <label for="user-gender-2">Female
+          <input id="user-gender-2" type="radio" name="gender" value="female">
+        </label>
+
+        <label for="user-gender-3">Other
+          <input id="user-gender-3" type="radio" name="gender" value="other">
+        </label>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>City:</td>
+      <td>
+        <select name="city">
+        <option value="1">Kyiv</option>
+        <option value="2">Dnepr</option>
+        <option value="3">Kharkiv</option>
+        <option value="4">Odesa</option>
+        <option value="5">Lviv</option>
+      </select>
+    </td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        <textarea name="feedback-text"></textarea>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        <input type="submit" name="submit" value="Send">
+      </td>
+    </tr>
+
+  </table>
+
+  </form>
+
+  <hr>
+
+  <p class="footer">
+    LevelUp Web Studio / 27.11.2020 / serken ©
+  </p>
+
+</body>
+</html>

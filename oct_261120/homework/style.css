@@ -1,0 +1,36 @@
+.footer {
+  width: 350px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* * {
+  border: 0;
+  margin: 0;
+  padding: 0;
+} */
+
+#feedbackTable {
+  width: 500px;
+  margin: 50px auto;
+  padding: 10px;
+  border-collapse: collapse;
+}
+
+#feedbackTable td {
+  border: 1px black solid;
+  padding: 5px 10px 5px 10px;
+}
+
+#feedbackTable input[type="submit"] {
+  width: 100%;
+  height: 30px;
+  margin: 10px 0;
+}
+
+#feedbackTable textarea {
+  padding: 10px;
+  width: 100%;
+  height: 120px;
+  box-sizing: border-box;
+}
