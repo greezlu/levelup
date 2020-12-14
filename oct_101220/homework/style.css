@@ -16,6 +16,23 @@
 header {
   height: 100px;
   background: #01BAEF;
+  padding: 0 50px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  width: 100px;
+}
+
+header td {
+  text-align: center;
+}
+
+header input[type="submit"] {
+  width: 100%;
 }
 
 /* ---------------------------------- */
