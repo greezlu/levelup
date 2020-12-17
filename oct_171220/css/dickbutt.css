@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+}
+
+#container a {
+    display: block;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    background-color: #a7a8ff;
+    text-decoration: none;
+}
+
+#container a:first-of-type {
+    margin-right: 10px;
+}
+
+#img-right-move {
+    transition-property: top, left, margin-left, margin-top;
+    transition-duration: 2s;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 0;
+    margin-top: calc(100vh - 135px);
+}
+
+#img-right-move:target {
+    left: 100%;
+    margin-left: -100px;
+}
