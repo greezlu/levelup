@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+body {
+  background-color: #759AAB;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* ------------------------------------- */
+
+#gallery {
+  width: 1280px;
+  height: 720px;
+  position: relative;
+  overflow: hidden;
+}
+
+#gallery img {
+  display: block;
+  position: absolute;
+  width: 100%;
+  transition-property: left;
+  transition-duration: 1s;
+}
+
+#img-1 {
+  left: 0;
+}
+
+#img-2 {
+  left: 100%;
+}
+
+#img-2:target {
+  left: 0;
+}
+
+#img-2:target+#img-1 {
+  left: -100%;
+}
+
+/* ------------------------------------- */
+
+#gallery a {
+  display: block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background-size: contain;
+  top: 50%; margin-top: -50px;
+}
+
+#gallery .arrow-left {
+  background-image: url(../images/left-arrow.png)
+}
+
+#gallery .arrow-right {
+  background-image: url(../images/next.png);
+  right: 0;
+}

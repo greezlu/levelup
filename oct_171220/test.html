@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+   <style>
+       *{
+           margin: 0;
+       }
+       nav{
+           text-align: center;
+       }
+       #test{
+           position: absolute;
+           top: -30px;
+       }
+       #human{
+           height: 50px;
+           width: 50px;
+           position: absolute;
+           left: 10px;
+           bottom: 100vh;
+           transition-duration: 1500ms;
+           transition-property: left, bottom;
+       }
+       input#test:focus+#human{
+           bottom: 10px;
+       }
+       #human img{
+           width: 100%;
+           height: 100%;
+       }
+       #test:target+#human{
+           bottom: 10px;
+       }
+       #human:target{
+           left: calc(100% - 60px);
+           bottom: 10px;
+       }
+   </style>
+</head>
+<body>
+   <nav>
+       <a href="#test">Left</a>
+       <a href="#human">Right</a>
+   </nav>
+   <input id="test" type="text" autofocus/>
+   <div id="human">
+       <img src="https://img.icons8.com/ios/452/asian-character.png" alt="human"/>
+   </div>
+</body>
+</html>

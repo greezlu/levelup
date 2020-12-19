@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+body {
+  background-color: #759AAB;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
+  width: 1280px;
+  height: 720px;
+  list-style: none;
+  position: relative;
+  overflow: hidden;
+}
+
+li {
+  width: 1280px;
+  height: 720px;
+  font-size: 0;
+  position: absolute;
+  z-index: 10;
+  left: 100%;
+  /* transition-property: left;
+  transition-duration: 1s; */
+}
+
+/* почему transition всё ломает - понятия не имею */
+
+li:first-of-type {
+  left: 0;
+}
+
+li:target {
+  left: 0;
+  z-index: 11;
+}
+
+.arrow {
+  display: block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background-size: contain;
+  top: 50%; margin-top: -50px;
+}
+
+.arrow-left {
+  background-image: url(../images/left-arrow.png)
+}
+
+.arrow-right {
+  background-image: url(../images/next.png);
+  right: 0;
+}
+
+img {
+  width: 100%;
+}
