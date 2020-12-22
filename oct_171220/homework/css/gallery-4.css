@@ -65,17 +65,33 @@ body {
 #img-1 {
   margin-left: -400px;
 }
+a[href="#img-1"] {
+  background-image: url(../images/1.jpg);
+  background-size: contain;
+}
 
 #img-2 {
   margin-left: -193px;
+}
+a[href="#img-2"] {
+  background-image: url(../images/2.jpg);
+  background-size: contain;
 }
 
 #img-3 {
   margin-left: 13px;
 }
+a[href="#img-3"] {
+  background-image: url(../images/3.jpg);
+  background-size: contain;
+}
 
 #img-4 {
   margin-left: 220px;
+}
+a[href="#img-4"] {
+  background-image: url(../images/4.jpg);
+  background-size: contain;
 }
 
 #preview-area img:target {

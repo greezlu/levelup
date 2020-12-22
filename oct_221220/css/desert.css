@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    background-image: url(../images/desert.jpg);
+    overflow: hidden;
+    background-size: auto 100vh;
+    /*background-position: center center;*/
+    background-repeat: no-repeat;
+}
+
+#tumbleweed {
+    width: 100px;
+    height: 100px;
+    background-image: url(../images/tumbleweed.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: -100px;
+    animation: weed-rotate 2s 2s infinite linear, weed-move 4s 2s infinite linear;
+}
+
+#rock {
+    width: 80px;
+    height: 50px;
+    background-image: url(../images/rock.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 65%;
+}
+
+@keyframes weed-rotate {
+
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes weed-move {
+
+    0% {
+        bottom: 0;
+        left: -100px;
+    }
+
+    60% {
+        bottom: 0;
+    }
+
+    65% {
+        bottom: 40px;
+    }
+
+    70% {
+        bottom: 40px;
+    }
+
+    75% {
+        bottom: 0;
+    }
+
+    100% {
+        left: 100%;
+    }
+
+}
