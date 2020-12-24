@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 50px;
+    background-color: red;
+}
+
+main {
+    min-height: 60px;
+    display: flex;
+}
+
+footer {
+    height: 30px;
+    background-color: green;
+}
+
+#lsb, #rsb {
+    background-color: blue;
+    flex-basis: 20%;
+    min-height: 200px;
+}
+
+#content {
+    background-color: orange;
+    flex-basis: 60%;
+    min-height: 200px;
+}
+
+@media screen and (max-width: 600px) {
+
+    main {
+        flex-direction: column;
+    }
+
+    #lsb, #rsb, #content {
+        min-height: 30px;
+    }
+
+    #content {
+        order: 1;
+    }
+
+    #lsb {
+        order: 2;
+    }
+
+    #rsb {
+        display: none;
+    }
+
+}
+
+@media print {
+
+    header, footer {
+        display: none;
+    }
+
+}
