@@ -100,7 +100,7 @@ if (!error) {
 
   for (let i=1;i<=mainNumber;i++) {
 
-    let maxStars = i+(i-1);
+    let maxStars = i*2-1;
     let string = "";
 
     for (let k=0;k<maxSymbols;k++) {
