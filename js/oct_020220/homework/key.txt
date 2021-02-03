@@ -1,0 +1,6 @@
+2bb4af8c10d9715e5ebac9192424d40e1f2d0460
+
+git remote rm origin
+git remote add origin \
+https://YOUR_GITHUB_USERNAME:$GITHUB_ACCESS_TOKEN@github.com/YOUR_GITHUB_USERNAME/compciv.git
+https://greezlu:$2bb4af8c10d9715e5ebac9192424d40e1f2d0460@github.com/greezlu/levelup.git
