@@ -54,7 +54,7 @@ arr.sort(function(a, b) { return a - b; });
 alert(arr);  // 1, 2, 15
 */
 
-
+/*
 function camelize (str) {
     let splitStr = str.split("-");
     console.log(splitStr);
@@ -80,7 +80,7 @@ function camelize(str) {
 camelize("background-color");
 camelize("list-style-image");
 camelize("-webkit-transition");
-
+*/
 
 
 /*
@@ -120,3 +120,89 @@ function getEvensFromPrompt () {
 
 getEvensFromPrompt();
 */
+
+/*
+function filterRange (arr, min, max) {
+  return arr.filter(item => (item >= min && item <= max));
+}
+
+let arr = [5, 3, 8, 1];
+
+let filtered = filterRange(arr, 1, 4);
+
+alert( filtered ); // 3,1 (совпадающие значения)
+
+alert( arr ); // 5,3,8,1 (без изменений)
+*/
+
+/*
+function filterRangeInPlace (arr, min, max) {
+  arr.map((item,index)=>{
+    if (item>max || item < min) {
+      arr.splice(index,1);
+    }
+  });
+}
+
+let arr = [5, 3, 8, 1];
+filterRangeInPlace(arr, 1, 4); // удалены числа вне диапазона 1..4
+alert( arr ); // [3, 1]
+*/
+
+
+/*
+let arr = [5, 2, 1, -10, 8];
+
+arr.sort((a,b)=>{b-a});
+
+// ... ваш код для сортировки по убыванию
+
+alert( arr ); // 8, 5, 2, 1, -10
+*/
+
+/*
+let arr = ["HTML", "JavaScript", "CSS"];
+
+function copySorted (arr) {
+  return arr.slice().sort();
+}
+
+let sorted = copySorted(arr);
+
+alert( sorted ); // CSS, HTML, JavaScript
+alert( arr ); // HTML, JavaScript, CSS (без изменений)
+*/
+
+let calc = new Calculator;
+alert( calc.calculate("3 + 7") ); // 10
+
+let powerCalc = new Calculator;
+powerCalc.addMethod("*", (a, b) => a * b);
+powerCalc.addMethod("/", (a, b) => a / b);
+powerCalc.addMethod("**", (a, b) => a ** b);
+
+let result = powerCalc.calculate("2 ** 3");
+alert( result ); // 8
+
+function Calculator () {
+
+  let mathMethods = {
+    "+": (a,b)=>a+b
+  }
+
+  this.calculate = function (str) {
+    let method = str.split(" ")[1];
+    let operandOne = Number( str.split(" ")[0] );
+    let operandTwo = Number( str.split(" ")[2] );
+    return mathMethods[method](operandOne,operandTwo);
+  }
+
+  this.addMethod = function (name, func) {
+    mathMethods[name] = func;
+  }
+  
+}
+
+
+
+
