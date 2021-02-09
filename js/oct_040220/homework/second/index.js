@@ -20,7 +20,7 @@ function getPrimesFromRange () {
 
   let primeResult = "";
 
-  for (from;from<=to;from++) {
+  for (;from<=to;from++) {
     if (isPrime (from)) primeResult += from + " ";
   }
 

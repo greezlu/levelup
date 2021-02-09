@@ -16,6 +16,7 @@ function getAdvise (bmi) {
 }
 
 function getParams () {
+
   let hight = +prompt("Please enter your height");
   let weidth = +prompt("Please enter your weidth");
 
@@ -23,6 +24,7 @@ function getParams () {
   let advice = getAdvise (bmi);
 
   alert("Your weight is: "+advice);
+
 }
 
 getParams ();
