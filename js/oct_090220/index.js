@@ -173,6 +173,7 @@ alert( sorted ); // CSS, HTML, JavaScript
 alert( arr ); // HTML, JavaScript, CSS (без изменений)
 */
 
+/*
 let calc = new Calculator;
 alert( calc.calculate("3 + 7") ); // 10
 
@@ -200,9 +201,109 @@ function Calculator () {
   this.addMethod = function (name, func) {
     mathMethods[name] = func;
   }
-  
+
+}
+*/
+
+/*
+let vasya = { name: "Вася", age: 25 };
+let petya = { name: "Петя", age: 30 };
+let masha = { name: "Маша", age: 28 };
+
+let users = [ vasya, petya, masha ];
+
+let names = users.map(item=>item.name);
+
+
+
+alert( names ); // Вася, Петя, Маша
+
+*/
+
+/*
+let vasya = { name: "Вася", surname: "Пупкин", id: 1 };
+let petya = { name: "Петя", surname: "Иванов", id: 2 };
+let masha = { name: "Маша", surname: "Петрова", id: 3 };
+
+let users = [ vasya, petya, masha ];
+
+let usersMapped = users.map(user=>({
+  fullName: user.name + " " + user.surname,
+  id: user.id
+}));
+
+console.log(usersMapped)
+console.log( usersMapped[0].id ) // 1
+console.log( usersMapped[0].fullName ) // Вася Пупкин
+*/
+
+/*
+let vasya = { name: "Вася", age: 25 };
+let petya = { name: "Петя", age: 30 };
+let masha = { name: "Маша", age: 28 };
+
+let arr = [ vasya, petya, masha ];
+
+sortByAge(arr);
+
+function sortByAge (arr) {
+  arr.sort((a,b)=>a.age - b.age);
 }
 
+// теперь: [vasya, masha, petya]
+alert(arr[0].name); // Вася
+alert(arr[1].name); // Маша
+alert(arr[2].name); // Петя
+*/
 
+/*
+let arr = [1, 2, 3];
+
+function shuffle (arr) {
+  arr.sort((a,b)=>Math.random()*-0.5)
+}
+
+shuffle(arr)
+console.log(arr);
+// arr = [3, 2, 1]
+
+shuffle(arr)
+console.log(arr);
+// arr = [2, 1, 3]
+
+shuffle(arr)
+console.log(arr);
+// arr = [3, 1, 2]
+// ...
+*/
+
+/*
+let vasya = { name: "Вася", age: 25 };
+let petya = { name: "Петя", age: 30 };
+let masha = { name: "Маша", age: 29 };
+
+let arr = [ vasya, petya, masha ];
+
+function getAverageAge (arr) {
+  return arr.reduce((val, user)=>(val+user.age),0) / arr.length;
+}
+
+alert( getAverageAge(arr) ); // (25 + 30 + 29) / 3 = 28
+*/
+
+function unique (arr) {
+  let uniqueArr = new Array();
+
+  arr.forEach((item, index) => uniqueArr.includes(item)?false:uniqueArr.push(item) );
+
+  return uniqueArr;
+
+}
+
+let strings = ["кришна", "кришна", "харе", "харе",
+  "харе", "харе", "кришна", "кришна", ":-O"
+];
+
+console.log( unique(strings) ); // кришна, харе, :-O
 
 
