@@ -291,19 +291,4 @@ function getAverageAge (arr) {
 alert( getAverageAge(arr) ); // (25 + 30 + 29) / 3 = 28
 */
 
-function unique (arr) {
-  let uniqueArr = new Array();
-
-  arr.forEach((item, index) => uniqueArr.includes(item)?false:uniqueArr.push(item) );
-
-  return uniqueArr;
-
-}
-
-let strings = ["кришна", "кришна", "харе", "харе",
-  "харе", "харе", "кришна", "кришна", ":-O"
-];
-
-console.log( unique(strings) ); // кришна, харе, :-O
-
 
