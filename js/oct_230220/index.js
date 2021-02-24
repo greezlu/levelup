@@ -62,15 +62,21 @@ alert(getMealCost());
 let newArr = Array();
 
 for (let i=0;i<10000;i++) {
-  newArr.push(Math.random()*100);
+  let num = Math.random()*100;
+  if (num%1 >= 0.5) {
+    num += 1-num%1;
+  } else {
+    num -= num%1;
+  }
+  newArr.push(num);
 }
 
 // console.log(newArr);
 
 let date = Date.now();
-// console.log(bubbleSort([4,1,6,73,1,7,10,100,3]));
-// console.log( bubbleSort(newArr) );
-bubbleSort(newArr);
+// console.log(bubbleSort([9,4,1,6,73,1,7,10,100,3]));
+// console.log( insertionSort(newArr) );
+insertionSort(newArr);
 console.log(Date.now() - date);
 
 /*
@@ -97,10 +103,10 @@ function bubbleSort (arr) {
 }
 */
 
-
+/*
 function bubbleSort (arr) {
     for (let i=0;i<arr.length;i++) {
-      for (let k=i+1;k<arr.length-i;k++) {
+      for (let k=i+1;k<arr.length;k++) {
             if (arr[i]>arr[k]) {
                 let a = arr[i];
                 arr[i] = arr[k];
@@ -110,6 +116,40 @@ function bubbleSort (arr) {
     }
     return arr;
 }
+*/
+
+
+/*
+function mySort (arr) {
+  let a;
+  for (let k=0;k<arr.length;k++) {
+    for (let i=0;i<arr.length-k;i++) {
+    if (arr[i]>arr[i+1]) {
+      a = arr[i];
+      arr[i] = arr[i+1];
+      arr[i+1] = a;
+    }
+  }
+}
+  return arr;
+}
+*/
+
+// Сортировка нормального человека
+function insertionSort(inputArr) {
+    let length = inputArr.length;
+        for (let i = 1; i < length; i++) {
+            let current = inputArr[i];
+            let j = i-1;
+            while ((j > -1) && (current < inputArr[j])) {
+                inputArr[j+1] = inputArr[j];
+                j--;
+            }
+            inputArr[j+1] = current;
+        }
+    return inputArr;
+}
+
 
 
 /*
