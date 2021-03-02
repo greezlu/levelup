@@ -19,7 +19,8 @@ function getRandomArray (amount, min, max) {
     for (let i=0;i<amount;i++) {
         let num = ""+randomAccInteger(min,max,2);//String(num)
         if (num.length===2) num += ".";
-        for (let k=0; k<5-num.length;k++) {
+        let length = 5-num.length; //Fix
+        for (let k=0; k<length;k++) {
           num += "0";
         }
         newArr[newArr.length] = num;
