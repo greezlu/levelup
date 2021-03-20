@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-family: sans-serif;
+}
+
+#virus {
+  background-image: url("virus.png");
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  transition: all 0.5s linear;
+  top: 0;
+  left: 0;
+}
+
+body {
+  background-image: url("map.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+}
