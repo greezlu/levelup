@@ -1,0 +1,46 @@
+* {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#field {
+  background-image: url("./images/field.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 1080px;
+  height: 720px;
+  user-select: none;
+}
+
+#score {
+  width: 1080px;
+  height: 50px;
+  background-color: #f8f9fa;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 40px;
+  font-family: sans-serif;
+  padding-top: 3px;
+}
+
+#ball {
+  width: 60px;
+  height: 60px;
+  background-image: url("./images/ball.png");
+  background-size: cover;
+  position: absolute;
+}
