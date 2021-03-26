@@ -1,0 +1,116 @@
+* {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  font-family: sans-serif;
+  position: relative;
+}
+
+/* -------------------------------------- */
+
+header {
+  width: 800px;
+  height: 100px;
+  /* background-color: silver; */
+  text-align: center;
+  line-height: 100px;
+  position: relative;
+  margin: 20px 0;
+}
+
+header span {
+  font-size: 60px;
+  font-family: serif;
+}
+
+header img {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+}
+
+/* -------------------------------------- */
+
+nav {
+  width: 800px;
+  /* background-color: silver; */
+}
+
+ul li {
+  list-style: none;
+  display: block;
+  float: left;
+  width: 150px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background-color: #dfe1e5;
+  border: 1px solid black;
+  border-bottom: none;
+  margin-right: 5px;
+  border-radius: 3px 3px 0 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+ul li.li-selected {
+  background-color: white;
+}
+
+ul li:hover {
+  background-color: white;
+}
+
+/* -------------------------------------- */
+
+main {
+  width: 800px;
+  /* background: #dfe1e5; */
+  padding: 15px 20px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 0 3px 3px 3px;
+  margin-bottom: 40px;
+}
+
+main p {
+  margin: 10px;
+}
+
+
+/* -------------------------------------- */
+
+footer {
+  position: absolute;
+  bottom: 0;
+  margin: 10px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
