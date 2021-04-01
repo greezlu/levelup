@@ -15,10 +15,9 @@ var_dump($array);
 
 //Заполнить его случайными числами в промежутке [10;99]
 echo "\nRandom: \n";
-function randomReplace (&$val) {
+array_walk($array, function (&$val) {
   $val = random_int(10,99);
-}
-array_walk($array, "randomReplace");
+});
 var_dump($array);
 
 //Найти в данном массиве минимальное и максимальное числа
