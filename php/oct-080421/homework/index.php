@@ -92,8 +92,8 @@ $errors = findErrors();
 
   <form action="./index.php" method="get">
 
-    <input type="number" name="height" min="0" placeholder="Height">
-    <input type="number" name="weight" min="0" placeholder="Weight">
+    <input type="number" name="height" min="0" placeholder="Height" required>
+    <input type="number" name="weight" min="0" placeholder="Weight" required>
     <input type="submit" name="submit">
 
   </form>
