@@ -11,10 +11,9 @@ class Main {
      */
     public static function init () {
 
-        $storage = new Storage("./storage.json");
-        $templateFile = "./html/main_template.php";
+        $storage = new Storage();
 
-        if ($_SERVER["REQUEST_METHOD"] === "GET") {
+        if ( $_SERVER["REQUEST_METHOD"] === "GET" ) {
 
             $id = filter_input(INPUT_GET, "id", FILTER_VALIDATE_INT);
 
@@ -42,12 +41,18 @@ class Main {
 
             }
 
-            $page = new Page($templateFile, $pageFile, $pageName);
+            $page = new Page($pageFile, $pageName);
             $page->render($data);
 
-        } else if ( $_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["note"]) ) {
-
-            $note = filter_input(INPUT_POST, "note");
+        } else {
+  
+            if ( $_SERVER["REQUEST_METHOD"] !== "POST" ) {
+              self::error404();
+            }
+  
+            if ( isset($_POST["note"] ) ) {
+              $note = filter_input(INPUT_POST, "note");
+            }
 
             if ($note) {
 
@@ -55,13 +60,10 @@ class Main {
                 self::redirect();
 
             } else {
-
+              
                 self::error404();
+                
             }       
-
-        } else {
-
-            self::error404();
 
         }
 
@@ -73,11 +75,10 @@ class Main {
      */
     public static function error404 () {
 
-        $templateFile = "./html/main_template.php";
         $pageFile =     "./html/error_page.php";
         $pageName =     "Error 404";
 
-        $page = new Page($templateFile, $pageFile, $pageName);
+        $page = new Page($pageFile, $pageName);
         $page->render();
 
         exit();
@@ -90,12 +91,8 @@ class Main {
      */
     public static function redirect () {
 
-        $templateFile = "./html/main_template.php";
-        $pageFile =     "./html/all_notes_page.php";
-        $pageName =     "Notes List";
-
-        $page = new Page($templateFile, $pageFile, $pageName);
-        $page->render();
+        header("Location: /");
+        exit();
 
     }
 

@@ -30,7 +30,13 @@ class Page {
      * @param string $pageName Name of the future page
      * @return void
      */
-    public function __construct (string $templateFile, string $pageFile, string $pageName) {
+    public function __construct (
+
+        string $pageFile,
+        string $pageName,
+        string $templateFile = "./html/main_template.php"
+
+    ) {
 
         $this->templateFile = $templateFile;
         $this->pageFile = $pageFile;

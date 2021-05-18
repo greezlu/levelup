@@ -1,0 +1,1 @@
+start D:\serken\php_1\php\php.exe -S localhost:80 -c D:\serken\php_1\php\php.ini

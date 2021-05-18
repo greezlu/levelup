@@ -15,7 +15,7 @@ class Storage {
      * @param string $filePath Path to the storage file
      * @return void
      */
-    public function __construct (string $filePath) {
+    public function __construct (string $filePath = "./storage.json") {
         $this->storageFile = $filePath;
     }
 
@@ -24,7 +24,11 @@ class Storage {
      * @return array
      */
     public function getAllNotes () :array {
-
+        
+        if (!file_exists($this->storageFile)) {
+          return [];
+        }
+        
         $notesJson = file_get_contents($this->storageFile);
         $notesArray = json_decode($notesJson, true) ?? [];
 
