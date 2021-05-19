@@ -23,6 +23,7 @@ div.note p {
     margin-top: 10px;
 }
 
-a.view-button:hover {
+.view-button a:hover {
     background-color: #263132;
+    transition: background-color 0.3s;
 }

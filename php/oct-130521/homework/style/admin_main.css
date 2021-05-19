@@ -1,0 +1,62 @@
+#add-note textarea[name="note"]{
+    background-color: #1C242D;
+    border: 1px solid #2f3338;
+    width: 100%;
+    height: 200px;
+    outline: none;
+    resize: vertical;
+    padding: 5px 10px;
+}
+
+#add-note input[type="submit"] {
+    background-color: transparent;
+    border: 1px solid #A9CF54;
+    color: #A9CF54;
+    font-size: 16px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    /* float: right; */
+}
+
+#add-note input[type="submit"]:hover {
+    background-color: #263132;
+    transition: background-color 0.3s;
+}
+
+
+div.note, #add-note {
+    margin-bottom: 15px;
+    width: 720px;
+    padding: 10px;
+    background-color: #242F39;
+    border: 1px solid #2f3338;
+}
+
+div.note:last-of-type {
+    margin-bottom: 0;
+}
+
+div.note p {
+    margin-top: 10px;
+}
+
+.remove-button input[type="submit"] {
+    width: 100%;
+    background: transparent;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #ED3B1C;
+    color: #ED3B1C;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.remove-button input[type="submit"]:hover {
+    background-color: #ED3B1C;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}

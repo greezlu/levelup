@@ -11,11 +11,14 @@
 <body>
 
     <header>
-        <div class="header-container">
-            <a href="/">NOTES</a>
-        </div>        
+        <div class="header-container index-header">
+            <a href="/index.php">NOTES</a>
+        </div>
+        <div class="header-container admin-header">
+            <a href="/admin.php">ADMIN</a>
+        </div>
     </header>
-    
+
     <main>
         <section></section>
         <section class="content">
@@ -23,7 +26,7 @@
         </section>
         <section></section>
     </main>
-    
+
     <footer>
         <a href="https://github.com/greezlu/levelup/tree/master/php/oct-130521/homework">
             <img src="./images/github.png" alt="Github Link">

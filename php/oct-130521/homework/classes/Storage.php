@@ -25,14 +25,12 @@ class Storage {
      */
     public function getAllNotes () :array {
         
-        if (!file_exists($this->storageFile)) {
-          return [];
-        }
+        if ( !file_exists($this->storageFile) ) return [];
         
         $notesJson = file_get_contents($this->storageFile);
-        $notesArray = json_decode($notesJson, true) ?? [];
+        $notesList = json_decode($notesJson, true) ?? [];
 
-        return $notesArray;
+        return $notesList;
 
     }
 
@@ -42,14 +40,25 @@ class Storage {
      */
     public function addNote (string $note) {
 
-        $notesJson = file_get_contents($this->storageFile);
+        if ($note === "") return false;
+        $notesList = $this->getAllNotes();
+        array_push( $notesList, htmlentities($note) );
+        $this->setNotes($notesList);
 
-        $notesArray = $notesJson ? json_decode($notesJson, true) : [];
+    }
 
-        array_push($notesArray, $note);
+    public function removeNote (int $id) {
 
-        $notesJson = json_encode($notesArray);
+        $notesList = $this->getAllNotes();
+        if ( !isset($notesList[$id]) ) return false;
+        array_splice($notesList, $id, 1);
+        $this->setNotes($notesList);
 
+    }
+
+    public function setNotes (array $notesList) {
+
+        $notesJson = json_encode($notesList, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG);
         file_put_contents($this->storageFile, $notesJson);
 
     }

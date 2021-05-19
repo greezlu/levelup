@@ -1,1 +1,1 @@
-start D:\serken\php_1\php\php.exe -S localhost:80 -c D:\serken\php_1\php\php.ini
+start G:\code\php\php\php.exe -S localhost:80 -c g:\code\php\php\php.ini
