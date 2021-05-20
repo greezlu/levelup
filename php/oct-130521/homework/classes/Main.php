@@ -3,7 +3,13 @@
 /**
  * Main class to initiate script
  */
-class Main {
+abstract class Main {
+
+  /**
+   * Initiate at the start of the script
+   * @return void
+   */
+    abstract static public function init ();
 
     /**
      * Redirect to the 404 page
