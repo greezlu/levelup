@@ -1,0 +1,113 @@
+---------------------------------------------------------------------------
+Имя препода и название предмета, который он читает
+---------------------------------------------------------------------------
+
+SELECT
+teachers.name AS "Teacher",
+subjects.name AS "Subject"
+
+FROM teachers
+
+LEFT OUTER JOIN teacher_subject ON teacher_subject.teacher_id = teachers.id
+INNER JOIN subjects ON teacher_subject.subject_id = subjects.id;
+
+---------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------
+Имя, фамилия, email студента, название группы
+---------------------------------------------------------------------------
+
+SELECT
+students.name AS "Name",
+students.lastname AS "Last name",
+students.email AS "Email",
+groups.name
+
+FROM students
+
+LEFT OUTER JOIN student_groups ON students.id = student_groups.student_id
+INNER JOIN `groups` ON student_groups.group_id = groups.id;
+
+---------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------
+email студента, который проходит обучение
+---------------------------------------------------------------------------
+
+SELECT students.email AS "Email"
+
+FROM students
+
+INNER JOIN student_groups ON students.id = student_groups.student_id
+LEFT OUTER JOIN `groups` ON student_groups.group_id = groups.id
+
+WHERE groups.graduation_date IS NULL
+
+ORDER BY students.id;
+
+---------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------
+Название группы, которая выпустилась
+---------------------------------------------------------------------------
+
+SELECT name
+FROM `groups`
+WHERE graduation_date IS NOT NULL;
+
+---------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------
+Имя, фамилия препода, который не ведет ни одной группы
+---------------------------------------------------------------------------
+
+SELECT
+	teachers.name AS "Name",
+	teachers.lastname AS "Last name"
+
+FROM teachers
+
+LEFT OUTER JOIN `groups` ON teachers.id = groups.teacher_id
+
+WHERE groups.id IS NULL;
+
+---------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------
+Количество групп, которые выпустились и количество студентов в них
+---------------------------------------------------------------------------
+
+SELECT
+    COUNT(groups.id) as "Amount of graduated groups"
+FROM `groups`
+GROUP BY groups.graduation_date
+HAVING groups.graduation_date IS NOT NULL;
+
+SELECT
+    COUNT(student_groups.student_id) as "Amount of graduated students"
+FROM `student_groups`
+INNER JOIN `groups` ON student_groups.group_id = groups.id
+WHERE groups.graduation_date IS NOT NULL
+GROUP BY student_groups.group_id;
+
+---------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------
+Имя, фамилия препода, количество предметов, которые он может читать
+---------------------------------------------------------------------------
+
+SELECT
+    teachers.name AS "Name",
+    teachers.lastname AS "Last Name",
+    COUNT(teacher_subject.id) AS "Amount of subjects"
+FROM teachers
+INNER JOIN teacher_subject ON teachers.id = teacher_subject.teacher_id
+GROUP BY teachers.id;
+
+---------------------------------------------------------------------------
