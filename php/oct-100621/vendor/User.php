@@ -22,9 +22,16 @@
       return $result->fetch_all(MYSQLI_ASSOC);
     }
   
-    public function addUser ($login, $pass, $email) {
+    public function addUser ($login, $pass, $verify, $email) {
+      if ($pass !== $verify) { return false; }
       $pass = password_hash($pass, PASSWORD_DEFAULT);
       $query = "INSERT INTO `users` (`login`, `password`, `email`) VALUES ('$login', '$pass', '$email')";
+      $request = $this->db->query($query);
+      return $request;
+    }
+
+    public function removeUser ($login) {
+      $query = "DELETE FROM `users` WHERE `login` = '$login' LIMIT 1;";
       $request = $this->db->query($query);
       return $request;
     }

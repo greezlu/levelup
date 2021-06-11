@@ -12,10 +12,4 @@ spl_autoload_register(function($class){
   }
 });
 
-$usersDB = new User();
-
-//var_dump($usersDB->getAllUsers());
-//var_dump($usersDB->getUserByLogin("serken"));
-//var_dump($usersDB->addUser("test", "1234", "test@email.com"));
-
 Router::init();
