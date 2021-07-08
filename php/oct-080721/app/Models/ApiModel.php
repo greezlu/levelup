@@ -4,13 +4,13 @@ namespace Models;
 
 use \MySQL\Database;
 
-class TaskModel {
+class ApiModel {
 
-    static public function getTasks () {
-        return Database::selectAll("tasks_list");
+    static public function getAllPosts () {
+        return Database::selectAll("posts");
     }
 
-    static public function createTask (string $taskName) {
+    static public function createPost (string $body, string $author) {
         \MySQL\Database::insert("tasks_list", ["name" => $taskName]);
     }
 

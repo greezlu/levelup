@@ -14,7 +14,6 @@
                     <li><a href="<?= static::getUrl("task", "edit") ?>">Task Edit</a></li>
                 </ul>
             </nav>
-            
             <p><?php include_once "view/pages/$page.php"?></p>
         </main>
     </body>
