@@ -2,28 +2,23 @@
 
 namespace Models;
 
-use \MySQL\Database;
+use \Database\MySQL;
 
 class ApiModel {
 
     static public function getAllPosts () {
-        return Database::selectAll("posts");
+        return MySQL::select("posts");
     }
 
     static public function createPost (string $body, string $author) {
-        \MySQL\Database::insert("tasks_list", ["name" => $taskName]);
-    }
 
-    static public function editTask (int $id, string $taskName) {
-        \MySQL\Database::update("tasks_list", ["name" => $taskName], $id );
-    }
+        var_dump($body, $author);
 
-    static public function deleteTask (int $id) {
-        \MySQL\Database::delete("tasks_list", $id);
-    }
+        return MySQL::insert("posts", [
+            "body" => $body,
+            "author_name" => $author
+        ]);
 
-    static public function getTaskName (int $id) {
-        return \MySQL\Database::selectOne("tasks_list", "id", $id)["name"];
     }
 
 }
