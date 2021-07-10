@@ -2,7 +2,7 @@
 
 spl_autoload_register(function ($class) {
 
-    $filePath = "./app/$class.php";
+    $filePath = "app/$class.php";
     $filePath = str_replace("\\", "/", $filePath);
     
     if (file_exists($filePath)) {

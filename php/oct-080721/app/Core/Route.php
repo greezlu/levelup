@@ -7,15 +7,9 @@ class Route {
     static public function start () {
 
         $uriComponents = self::getUriComponents();
-    
-//        var_dump($uriComponents);
-//        exit();
 
         $controllerName = isset($uriComponents[0]) && $uriComponents[0] ? $uriComponents[0] : "index";
         $actionName = isset($uriComponents[1]) && $uriComponents[1] ? $uriComponents[1] : "index";
-        
-    //    var_dump($controllerName, $actionName);
-    //    exit();
 
         $controller = "\\Controllers\\".ucfirst($controllerName)."Controller";
 
