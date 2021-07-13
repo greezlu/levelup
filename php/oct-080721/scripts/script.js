@@ -92,6 +92,7 @@ class Discuss {
             this.showLoginForm();
             console.log("User is not defined on the server");
         } else {
+            this.showLoginForm();
             console.log("Unkonown error while getting user status");
         }
 
